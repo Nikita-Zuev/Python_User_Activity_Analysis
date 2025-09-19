@@ -33,12 +33,12 @@ A cohort is a group of users who started using a product (or had their first int
 
 ## Churn Rate Analysis by Game
 
-1.  **Calculating Activity Metrics**: For each user, we determine the date of their first and last activity, as well as the total duration of their "life" in the product.
-2.  **Defining Churn**: A user is considered "churned" if two conditions are met:
+1.  Calculating Activity Metrics: For each user, we determine the date of their first and last activity, as well as the total duration of their "life" in the product.
+2.  Defining Churn: A user is considered "churned" if two conditions are met:
     * Their last activity was more than 7 days ago. 
     * They were active in the game for at least 7 days (this helps to filter out users who just tried the game and didn't come back, separating them from those who were engaged but later left).
-3.  **Calculating the Churn Rate**: The churn percentage is calculated for each game by dividing the number of "churned" users by the total number of unique users in that game.
-4.  **Visualization**: The results are shown as a bar chart, which allows you to clearly compare the churn rates between the games.
+3.  Calculating the Churn Rate: The churn percentage is calculated for each game by dividing the number of "churned" users by the total number of unique users in that game.
+4.  Visualization: The results are shown as a bar chart, which allows you to clearly compare the churn rates between the games.
 
 
 
