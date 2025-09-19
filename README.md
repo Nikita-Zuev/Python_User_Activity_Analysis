@@ -1,33 +1,33 @@
-# Аналіз Відтоку Користувачів та Метрик Активності
+# User Churn and Activity Metrics Analysis
 
-## Опис Проєкту
+## Project Description
 
-Цей проєкт присвячений **комплексному аналізу даних користувачів** з метою виявлення ключових факторів, що впливають на **відтік (churn)**, а також для моніторингу їхньої активності за допомогою основних метрик:
-* **DAU** (Daily Active Users)
-* **WAU** (Weekly Active Users)
-* **MAU** (Monthly Active Users)
+This project is dedicated to a comprehensive analysis of user data to find the key factors that affect churn. It also aims to monitor user activity using these main metrics:
+* DAU (Daily Active Users)
+* WAU (Weekly Active Users)
+* MAU (Monthly Active Users)
 
-**Основні етапи проєкту:**
+**Main stages of the project:**
 
-* Збір даних про активність та характеристики користувачів шляхом парсингу веб-сторінки.
-* Очищення та трансформація даних для аналізу, включаючи об'єднання датасетів, обробку дат та видалення викидів.
-* Візуалізація ключових метрик активності (DAU, WAU, MAU) та виявлення поведінкових патернів.
-* Проведення когортного аналізу для оцінки утримання користувачів.
-* Розрахунок та візуалізація Churn Rate для кожної гри окремо.
-* Розробка та впровадження моделі машинного навчання для прогнозування відтоку.
-* Ідентифікація найважливіших факторів, що сприяють відтоку, для розробки ефективних стратегій утримання.
+* Collecting data on user activity and characteristics by parsing a webpage. 
+* Cleaning and transforming data for analysis, including combining datasets, processing dates, and removing outliers. 
+* Visualizing key activity metrics (DAU, WAU, MAU) and identifying user behavior patterns. 
+* Conducting a cohort analysis to evaluate user retention. 
+* Calculating and visualizing the Churn Rate for each game separately. 
+* Developing and implementing a machine learning model to predict churn. 
+* Identifying the most important factors that contribute to churn, to help develop effective retention strategies.
 
   
 
-## Когортний Аналіз
+## Cohort Analysis
 
-**Що таке когорта?** Когорта - це група користувачів, які почали користуватися продуктом (або здійснили першу взаємодію) в один і той же визначений період часу (у цьому проєкті - один місяць).
+A cohort is a group of users who started using a product (or had their first interaction) in the same defined period (in this project, one month).
 
-1.  Формування когорт: Користувачі групуються на основі місяця їхньої першої активності (`cohort_month`). Це дозволяє відстежувати поведінку саме цієї групи з плином часу.
-2.  Відстеження утримання: Після формування когорт, аналізується, яка частка цих користувачів залишається активною у наступні місяці. Це візуалізується за допомогою двох теплових карт, що показують:
-    * Кількість активних користувачів у кожній когорті** (абсолютні значення).
-    * Відсоток утримання користувачів у наступні періоди після їхньої першої активності.
-3.  Виявлення тенденцій: Когортний аналіз допомагає виявити, як змінюється довгострокове утримання різних груп користувачів. Наприклад, можна побачити, чи новіші когорти мають кращі або гірші показники утримання порівняно зі старішими.
+1. Cohort Formation: Users are grouped by the month of their first activity (cohort_month). This allows you to track the behavior of that specific group over time. 
+2. Tracking Retention: After the cohorts are formed, we analyze what part of these users stay active in the next months. This is shown with two heatmaps that present: 
+    * The number of active users in each cohort (absolute values). 
+    * The percentage of user retention in the periods after their first activity.
+3. Identifying Trends: Cohort analysis helps to discover how the long-term retention of different user groups changes. For example, you can see if newer cohorts have better or worse retention rates than older ones.
 
 
 
