@@ -53,5 +53,5 @@ A cohort is a group of users who started using a product (or had their first int
 2.  Model Training: The Random Forest Classifier algorithm is used for the analysis. It is trained on the prepared data to predict churn.
 3.  Identifying Key Factors: After training, the model allows us to evaluate the importance of each feature. The results are shown on a graph, which clearly demonstrates which factors have the biggest impact.
 
-Key Takeaway from the Model:
+**Key Takeaway from the Model:**
 The most important factors that influence churn are the number of active days and the player's age. In contrast, language, device model, and variety of actions have a much smaller impact.
