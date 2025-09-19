@@ -31,27 +31,27 @@ A cohort is a group of users who started using a product (or had their first int
 
 
 
-## Аналіз Відтоку (Churn Rate) за Іграми
+## Churn Rate Analysis by Game
 
-1.  Розрахунок метрик активності: Для кожного користувача визначається дата першої та останньої активності, а також загальна тривалість його "життя" у продукті.
-2.  Визначення відтоку (Churn): Користувач вважається "відтіклим", якщо виконуються дві умови:
-    * Його остання активність була більше ніж 7 днів тому.
-    * Він був активним у грі щонайменше 7 днів (це дозволяє відфільтрувати користувачів, які лише спробували гру і не повернулися, від тих, хто був залучений, але згодом пішов).
-3.  Розрахунок Churn Rate: Відсоток відтоку обчислюється для кожної гри шляхом ділення кількості "відтіклих" користувачів на загальну кількість унікальних користувачів у цій грі.
-4.  Візуалізація: Результати представлені у вигляді стовпчастої діаграми, що дозволяє наочно порівняти показники відтоку між іграми.
+1.  Calculating Activity Metrics: For each user, we determine the date of their first and last activity, as well as the total duration of their "life" in the product.
+2.  Defining Churn: A user is considered "churned" if two conditions are met:
+    * Their last activity was more than 7 days ago. 
+    * They were active in the game for at least 7 days (this helps to filter out users who just tried the game and didn't come back, separating them from those who were engaged but later left).
+3.  Calculating the Churn Rate: The churn percentage is calculated for each game by dividing the number of "churned" users by the total number of unique users in that game.
+4.  Visualization: The results are shown as a bar chart, which allows you to clearly compare the churn rates between the games.
 
 
 
-## Модель, що визначає вплив метрик на відтік клієнтів
+## A Model that Determines the Impact of Metrics on Customer Churn
 
-1.  **Формування ознак (Features)**: Для моделі використовуються такі характеристики користувача:
-    * `age` (вік)
-    * `language` (мова)
-    * `has_older_device_model` (наявність старого пристрою)
-    * `activity_variety` (різноманітність ігрових дій)
-    * `n_days_active` (загальна кількість днів активності)
-2.  Навчання моделі: Для аналізу використовується алгоритм Random Forest Classifier, який навчається на підготовлених даних для прогнозування відтоку.
-3.  Виявлення ключових факторів: Після навчання модель дозволяє оцінити важливість (importance) кожної ознаки. Результати візуалізуються на графіку, що наочно демонструє, які фактори мають найбільший вплив.
+1.  Feature Creation: The model uses the following user characteristics:
+    * `age` (age)
+    * `language` (language)
+    * `has_older_device_model` (presence of an old device)
+    * `activity_variety` (variety of game actions)
+    * `n_days_active` (total number of active days)
+2.  Model Training: The Random Forest Classifier algorithm is used for the analysis. It is trained on the prepared data to predict churn.
+3.  Identifying Key Factors: After training, the model allows us to evaluate the importance of each feature. The results are shown on a graph, which clearly demonstrates which factors have the biggest impact.
 
-**Ключовий висновок з моделі:**
-Hайважливішими факторами, що впливають на відтік, є кількість днів активності та вік гравця. Натомість мова, модель пристрою та різноманітність дій мають значно менший вплив.
+Key Takeaway from the Model:
+The most important factors that influence churn are the number of active days and the player's age. In contrast, language, device model, and variety of actions have a much smaller impact.
